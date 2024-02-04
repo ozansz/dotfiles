@@ -71,3 +71,17 @@ export PATH="$PATH:$CARGO_HOME/bin"
 # Use whichever works below
 #export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:/usr/local/go/bin"
+
+# Colorls
+## Install colorls if not installed
+
+gem which colorls
+if [[ $? -ne 0 ]]; then
+    gem install colorls --user-install
+fi
+
+## Add colorls to PATH
+export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
+
+## Tab completion for colorls
+source $(dirname $(gem which colorls))/tab_complete.sh
