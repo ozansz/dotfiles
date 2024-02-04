@@ -5,6 +5,12 @@
 
 alias v="nvim ."
 alias vv="nvim"
+
+where code
+if [[ $? -ne 0 ]]; then
+    alias code="open /Applications/Visual\ Studio\ Code.app"
+fi
+
 alias c="code ."
 
 # Colorls
