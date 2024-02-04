@@ -47,10 +47,12 @@ alias ta="terraform apply"
 alias tc="rm -r .terraform .terraform.lock.hcl terraform.tfstate terraform.tfstate.backup"
 
 # Fancy Aliases
-
+alias h="history"
 alias q="exit"
 alias cl="clear"
-# alias skert="sudo kill -9"
+alias ig="grep -i"
+alias hig="history | grep -i"
+alias skert="sudo kill -9"
 alias rezet="source ~/.zshrc"
 alias edidd="code ~/.zshrc ~/*.zsh"
 
@@ -66,4 +68,6 @@ export PATH="$PATH:$CARGO_HOME/bin"
 
 # Go
 
-export PATH="$PATH:$(go env GOPATH)/bin"
+# Use whichever works below
+#export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:/usr/local/go/bin"
